@@ -8,11 +8,6 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your Github Username?'
-    },
-    {
-        type: 'input',
-        name: 'link',
         message: 'Please enter the Github link to your profile.'
     },
     {
@@ -44,7 +39,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What license does your project need to have ?',
-        choices: ['MIT', 'ISC', 'MPL', 'EPL']
+        choices: ['MIT', 'ISC', 'MPL 2.0', 'EPL 1.0']
     },
     {
         type: 'input',
