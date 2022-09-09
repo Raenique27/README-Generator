@@ -7,8 +7,8 @@ const generateMarkdown = require('./utils/generateMarkdown')
 const questions = [
     {
         type: 'input',
-        name: 'Username',
-        message: 'What is your Github Username?'
+        name: 'github',
+        message: 'Enter your Github Username?'
     },
     {
         type: 'input',
@@ -22,27 +22,27 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Project Title',
+        name: 'title',
         message: 'What is the title of your project?'
     },
     {
         type: 'input',
-        name: 'Project Description',
+        name: 'description',
         message: 'Enter a description of your project.'
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'What should a user do to install your application?'
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'What should the user know in order to use your repo?'
     },
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'What license does your project need to have ?',
         choices: ['MIT', 'ISC', 'MPL', 'EPL']
     },
@@ -53,7 +53,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Testing',
+        name: 'testing',
         message: 'What does the user need to enter in order to run tests?'
     }
 
@@ -69,9 +69,12 @@ function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            console.log(answers);
+            writeToFile('./output1/README.md',generateMarkdown(answers));
         })
-}
+        .catch(error => {
+            console.log(error)
+        });
+};
 
 // Function call to initialize app
 init();
