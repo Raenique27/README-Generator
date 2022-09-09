@@ -1,5 +1,19 @@
 # README Generator
 
+  ![License](https://img.shields.io/badge/License-MIT-lightblue.svg function renderLicenseLink(license) {
+  if (license === "MIT") {
+    return "https://opensource.org/licenses/MIT";
+  } else if (license === "ISC") {
+    return "https://opensource.org/licenses/ISC";
+  } else if (license === "MPL2.0") {
+    return "https://opensource.org/licenses/MPL-2.0";
+  } else if (license === "EPL 1.0") {
+    return "https://opensource.org/licenses/EPL-1.0";
+  } else {
+    return "";
+  }
+}
+  
   ## Description
   Generates README.md based on user input
 
@@ -13,19 +27,19 @@
 
   <a name="introduction"></a>
   ## Installation
-  Install
+  install
 
   <a name="usage"></a>
   ## Usage
-  Include all packages used
+  usage
 
-  <a name="license">
+  <a name="license"></a>
   ## License
   This application is licensed under MIT. For more information check out https://opensource.org/licenses/MIT;
 
   <a name="contributing"></a>
   ## Contributing
-  Raenique Walters
+  contribute
 
   <a name="tests"></a>
   ## Tests
