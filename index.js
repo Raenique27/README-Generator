@@ -53,7 +53,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'testing',
+        name: 'tests',
         message: 'What does the user need to enter in order to run tests?'
     }
 
